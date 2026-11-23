@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medical-v1.3.9.';
+const CACHE_NAME = 'medical-v1.4.0';
 const urlsToCache = [
   './',
   'css/styles.css',
@@ -81,6 +81,7 @@ const urlsToCache = [
   '胆.html',
   '膵.html',
   '耳鼻科.html',
+  'images/HOME.jpg',
   'images/DM/ada.avif',
   'images/DM/egfr1.avif',
   'images/DM/egfr2.avif',
@@ -185,6 +186,7 @@ const urlsToCache = [
   'images/pancreas.png',
   'images/pancreas2.jpg',
   'images/pancreas-tx.png',
+  'images/HCC.png',
   'documents/DLP/01.pdf',
   'documents/DLP/02.pdf',
   'documents/DLP/03.pdf',

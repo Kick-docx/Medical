@@ -34,3 +34,18 @@
 .home-button:hover {
     transform: translateY(-3px);
 }
+
+.home-banner {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+}
+
+.home-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
