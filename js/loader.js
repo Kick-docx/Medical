@@ -1,8 +1,7 @@
-
-// loader.js の場所を基準にMedicalフォルダを取得
+// Medicalフォルダを基準にする
 const SITE_ROOT = new URL("../", document.currentScript.src);
 
-// 共通部品を読み込む
+// Medicalフォルダを起点にファイルを読み込む
 async function loadComponent(id, file) {
     const response = await fetch(new URL(file, SITE_ROOT));
 
@@ -21,7 +20,7 @@ async function loadComponent(id, file) {
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-    // 共通部品を読み込む
+    // 共通部品
     await loadComponent("header", "components/header.html");
     await loadComponent("menu", "components/menu.html");
     await loadComponent("search", "components/search.html");
