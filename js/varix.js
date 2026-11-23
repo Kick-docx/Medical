@@ -1,9 +1,9 @@
 const images = [
-    "images/varix/01.png",
-    "images/varix/02.png",
-    "images/varix/03.png",
-    "images/varix/04.png",
-    "images/varix/05.png",
+    "/Medical/images/varix/01.png",
+    "/Medical/images/varix/02.png",
+    "/Medical/images/varix/03.png",
+    "/Medical/images/varix/04.png",
+    "/Medical/images/varix/05.png",
 ];
 let currentSlide = 0;
 function showSlide() {

@@ -1,5 +1,10 @@
+
+// loader.js の場所を基準にMedicalフォルダを取得
+const SITE_ROOT = new URL("../", document.currentScript.src);
+
+// 共通部品を読み込む
 async function loadComponent(id, file) {
-    const response = await fetch(file);
+    const response = await fetch(new URL(file, SITE_ROOT));
 
     if (!response.ok) {
         console.error(`${file} の読み込みに失敗しました`);
@@ -7,7 +12,11 @@ async function loadComponent(id, file) {
     }
 
     const html = await response.text();
-    document.getElementById(id).innerHTML = html;
+    const target = document.getElementById(id);
+
+    if (target) {
+        target.innerHTML = html;
+    }
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -18,33 +27,30 @@ document.addEventListener("DOMContentLoaded", async () => {
     await loadComponent("search", "components/search.html");
     await loadComponent("footer", "components/footer.html");
 
-    // メニューがあるページだけ動作
+    // メニューの動作
     const menu = document.getElementById("sideMenu");
+    const button = document.getElementById("menuButton");
+    const overlay = document.getElementById("overlay");
 
-    if (menu) {
-        const button = document.getElementById("menuButton");
-        const overlay = document.getElementById("overlay");
-
+    if (menu && button && overlay) {
         button.addEventListener("click", () => {
-        menu.classList.toggle("open");
-        overlay.classList.toggle("show");
-    });
+            menu.classList.toggle("open");
+            overlay.classList.toggle("show");
+        });
 
-
-overlay.addEventListener("click", () => {
-    menu.classList.remove("open");
-    overlay.classList.remove("show");
-});
-
-    const searchButton = document.getElementById("searchButton");
-    const searchBox = document.getElementById("searchBox");
-    if (searchButton && searchBox) {
-    searchButton.addEventListener("click", () => {
-        searchBox.classList.toggle("show");
-    });
-}    
+        overlay.addEventListener("click", () => {
+            menu.classList.remove("open");
+            overlay.classList.remove("show");
+        });
     }
 
+    // 検索窓の動作
+    const searchButton = document.getElementById("searchButton");
+    const searchBox = document.getElementById("searchBox");
 
-
+    if (searchButton && searchBox) {
+        searchButton.addEventListener("click", () => {
+            searchBox.classList.toggle("show");
+        });
+    }
 });

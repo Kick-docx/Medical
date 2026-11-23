@@ -1,10 +1,10 @@
 const images = [
-    "images/COPD/01.jpg",
-    "images/COPD/02.jpg",
-    "images/COPD/03.jpg",
-    "images/COPD/04.jpg",
-    "images/COPD/05.jpg",
-    "images/COPD/06.jpg",
+    "/Medical/images/COPD/01.jpg",
+    "/Medical/images/COPD/02.jpg",
+    "/Medical/images/COPD/03.jpg",
+    "/Medical/images/COPD/04.jpg",
+    "/Medical/images/COPD/05.jpg",
+    "/Medical/images/COPD/06.jpg",
 ];
 let currentSlide = 0;
 function showSlide() {

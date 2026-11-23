@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>皮膚軟部組織感染症</title>
+
+    <link rel="stylesheet" href="/Medical/css/styles.css">
+    <link rel="stylesheet" href="/Medical/css/header.css">
+    <link rel="stylesheet" href="/Medical/css/menu.css">
+    <link rel="stylesheet" href="/Medical/css/search.css">
+    <link rel="stylesheet" href="/Medical/css/footer.css">
+    <link rel="manifest" href="/Medical/manifest.json">
+</head>
+<body>
+<div id="header"></div>
+<div id="menu"></div>
+<div id="search"></div>
+<main class="content">
+
+<h3>☆DVTの除外を必ず忘れない</h3>
+
+<h3>LRINEC Score</h3>
+<calc>
+<label>CRP (mg/L)</label>
+<input type="number" id="crp"><br>
+<label>白血球数 (×10³/μL)</label>
+<input type="number" id="wbc" step="0.1"><br>
+<label>Hb (g/dL)</label>
+<input type="number" id="hb" step="0.1"><br>
+<label>Na (mmol/L)</label>
+<input type="number" id="na"><br>
+<label>Cr (mg/dL)</label>
+<input type="number" id="cr" step="0.1"><br>
+<label>血糖 (mg/dL)</label>
+<input type="number" id="glu">
+<button onclick="calcLRINEC()">calc</button>
+<p id="lrinecResult"></p>
+    <table>
+    <tr><td>≦5</td><td>＜50%</td></tr>
+    <tr><td>6-7</td><td>50-75%</td></tr>
+    <tr><td>≧8</td><td>＞75%</td></tr></table>
+</calc>
+
+<img src="/Medical/images/esiseikinmakuen.jpeg" width="100%">
+
+</main>
+<div id="footer"></div>
+<script src="/Medical/js/loader.js"></script>
+</body>
+</html>

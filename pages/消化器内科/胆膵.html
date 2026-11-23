@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>胆膵</title>
+
+    <link rel="stylesheet" href="/Medical/css/styles.css">
+    <link rel="stylesheet" href="/Medical/css/header.css">
+    <link rel="stylesheet" href="/Medical/css/menu.css">
+    <link rel="stylesheet" href="/Medical/css/search.css">
+    <link rel="stylesheet" href="/Medical/css/footer.css">
+    <link rel="manifest" href="/Medical/manifest.json">
+</head>
+<body>
+<div id="header"></div>
+<div id="menu"></div>
+<div id="search"></div>
+<main class="content">
+
+<p>○金属ステント留置は膵炎・胆管炎のリスクが高まる．（ステントに隙間あるが閉塞されることも）</p>
+<p>ERCPでワイヤーを膵管留置することで胆管が直線化しカニュレーションしやすくなる．</p>
+
+<h2>✔️胆</h2>
+<div id="slideContainer" style="position: relative; text-align: center;">
+    <img id="slideImage" src="/Medical/images/biliary/01.jpg" style="width: 100%;">
+    <!-- 左ボタン -->
+    <button onclick="prevSlide()" style=
+        "position: absolute;
+        left: 10px; top: 50%; transform: translateY(-50%); 
+        background: rgba(0,0,0,0.45); 
+        color: white;
+        border: none;
+        font-size: 24px;
+        padding: 10px 14px;
+        border-radius: 4px;">＜
+    </button>
+    <!-- 右ボタン -->
+    <button onclick="nextSlide()" style=
+        "position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.45);
+        color: white;
+        border: none;
+        font-size: 24px;
+        padding: 10px 14px;
+        border-radius: 4px;">＞
+    </button>
+</div>
+<p id="slideNumber" style="text-align: center;">1 / 5</p>
+
+<img src="/Medical/images/biliary-tx.png" width="100%">
+
+<p><a href="/Medical/documents/gbstone.pdf">胆石症ガイドライン</a></p>
+
+<h2>✔️膵</h2>
+    <img src="/Medical/images/pancreas.png" width="100%">
+    <img src="/Medical/images/pancreas2.jpg" width="100%">
+<p>
+    R(Resectable)：切除可能
+<br>BR(Borderline resectable)：境界切除可能
+<br>　BR-PV：上腸間膜静脈/門脈に180度以上の接触・浸潤がある (十二指腸下縁を超えない)
+<br>　BR-A：上腸間膜動脈あるいは腹腔動脈に180度未満の接触・浸潤がある．総肝動脈に接触・浸潤あるが、固有肝動脈/腹腔動脈に接触・浸潤なし．
+<br>UR(Unresectable)：切除不能
+<br>　UR-LA：局所進行　BRの基準以上
+<br>　UR-M：遠隔転移あり(M1)
+</p>
+
+    <img src="/Medical/images/pancreas-tx.png" width="100%">
+
+<p>イリノテカン　UGT1A1 6,28の遺伝子型→野生型：リスク標準，ヘテロ(片方の変異)：中リスク，ホモや複合ヘテロ：高リスク</p>
+<p><a href="/Medical/documents/PC.pdf">膵癌ガイドライン</a></p>
+<p><a href="/Medical/documents/suien.pdf">急性膵炎ガイドライン</a></p>
+<p><a href="/Medical/documents/CP.pdf">慢性膵炎ガイドライン</a></p>
+
+</main>
+<div id="footer"></div>
+<script src="/Medical/js/pancreatobiliary.js"></script>
+<script src="/Medical/js/loader.js"></script>
+</body>
+</html>

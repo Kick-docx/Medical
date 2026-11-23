@@ -1,9 +1,9 @@
 const images = [
-    "images/biliary/01.jpg",
-    "images/biliary/02.jpg",
-    "images/biliary/03.jpg",
-    "images/biliary/04.jpg",
-    "images/biliary/05.jpg",
+    "/Medical/images/biliary/01.jpg",
+    "/Medical/images/biliary/02.jpg",
+    "/Medical/images/biliary/03.jpg",
+    "/Medical/images/biliary/04.jpg",
+    "/Medical/images/biliary/05.jpg",
 ];
 let currentSlide = 0;
 function showSlide() {

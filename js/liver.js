@@ -1,10 +1,10 @@
 const images = [
-    "images/liver/01.jpg",
-    "images/liver/02.jpg",
-    "images/liver/03.jpg",
-    "images/liver/04.jpg",
-    "images/liver/05.jpg",
-    "images/liver/06.jpg",
+    "/Medical/images/liver/01.jpg",
+    "/Medical/images/liver/02.jpg",
+    "/Medical/images/liver/03.jpg",
+    "/Medical/images/liver/04.jpg",
+    "/Medical/images/liver/05.jpg",
+    "/Medical/images/liver/06.jpg",
 ];
 let currentSlide = 0;
 function showSlide() {
@@ -143,4 +143,48 @@ function calculateNFS() {
   }
   result.innerHTML =
     "<p>NFS：" + nfs.toFixed(3) +"，肝線維化リスク：" + risk + "</p>";
+}
+
+
+function calculateMELD() {
+    const bilInput = document.getElementById("meldBil").value;
+    const crInput = document.getElementById("meldCr").value;
+    const inrInput = document.getElementById("meldINR").value;
+    const dialysis = document.getElementById("meldDialysis").checked;
+    const result = document.getElementById("meldResult");
+    if (bilInput === "" || crInput === "" || inrInput === "") {
+        result.innerHTML = "<p>すべて入力してください。</p>";
+        return;
+    }
+    let bil = Number(bilInput);
+    let cr = Number(crInput);
+    let inr = Number(inrInput);
+    if (
+        !Number.isFinite(bil) ||
+        !Number.isFinite(cr) ||
+        !Number.isFinite(inr) ||
+        bil <= 0 || cr <= 0 || inr <= 0
+    ) {
+        result.innerHTML = "<p>正しい数値を入力してください。</p>";
+        return;
+    }
+    // 小数第2位を四捨五入し、小数第1位まで使用
+    bil = Math.round(bil * 10) / 10;
+    cr = Math.round(cr * 10) / 10;
+    inr = Math.round(inr * 10) / 10;
+    // 日本のMELDスコア計算規定に基づく補正
+    bil = Math.max(1.0, Math.min(999.9, bil));
+    inr = Math.max(1.0, Math.min(999.9, inr));
+    cr = dialysis ? 4.0 : Math.max(1.0, Math.min(4.0, cr));
+    // MELD score
+    const meld =
+        9.57 * Math.log(cr) +
+        3.78 * Math.log(bil) +
+        11.20 * Math.log(inr) +
+        6.43;
+    const score = Math.round(meld);
+    result.innerHTML = `
+        <p><strong>MELDスコア：${score}</strong>　(${meld.toFixed(2)})</p>
+        <p>-9点：1.9%, 10-19点：6.0%, 20-29点：19.6%, 30-39点：52.6%, 40点-：71.3%</p>
+    `;
 }

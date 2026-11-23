@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>食道静脈瘤</title>
+
+    <link rel="stylesheet" href="/Medical/css/styles.css">
+    <link rel="stylesheet" href="/Medical/css/header.css">
+    <link rel="stylesheet" href="/Medical/css/menu.css">
+    <link rel="stylesheet" href="/Medical/css/search.css">
+    <link rel="stylesheet" href="/Medical/css/footer.css">
+    <link rel="stylesheet" href="/Medical/css/common.css">
+    <link rel="manifest" href="/Medical/manifest.json">
+</head>
+<body>
+<div id="header"></div>
+<div id="menu"></div>
+<div id="search"></div>
+<main class="content">
+    <div id="slideContainer" style="position: relative; text-align: center;">
+    <img id="slideImage" src="/Medical/images/varix/01.png" style="width: 100%;">
+    <!-- 左ボタン -->
+    <button onclick="prevSlide()" style=
+        "position: absolute;
+        left: 10px; top: 50%; transform: translateY(-50%); 
+        background: rgba(0,0,0,0.45); 
+        color: white;
+        border: none;
+        font-size: 40px;
+        padding: 10px 14px;
+        border-radius: 6px;">＜
+    </button>
+    <!-- 右ボタン -->
+    <button onclick="nextSlide()" style=
+        "position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.45);
+        color: white;
+        border: none;
+        font-size: 40px;
+        padding: 10px 14px;
+        border-radius: 6px;">＞
+    </button>
+</div>
+<p id="slideNumber">1 / 5</p>
+
+</main>
+<div id="footer"></div>
+<script src="/Medical/js/varix.js"></script>
+<script src="/Medical/js/loader.js"></script>
+</body>
+</html>
