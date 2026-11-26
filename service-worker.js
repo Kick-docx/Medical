@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medical-v1.5.0';
+const CACHE_NAME = 'medical-v1.3.0';
 const urlsToCache = [
   './',
   'css/styles.css',
@@ -81,7 +81,6 @@ const urlsToCache = [
   'pages/消化器内科/胆.html',
   'pages/消化器内科/膵.html',
   'pages/内科総合/耳鼻科.html',
-  
   'pages/消化器内科/化学療法/CAPOX+Zolbe.html',
   'pages/消化器内科/化学療法/CDGP+5-FU.html',
   'pages/消化器内科/化学療法/D-FLOT.html',
@@ -102,7 +101,6 @@ const urlsToCache = [
   'pages/消化器内科/化学療法/Nivo+Ipi.html',
   'pages/消化器内科/化学療法/SOX+Nivo.html',
   'pages/消化器内科/化学療法/SP+Tmab.html',
-
   'images/HOME.jpg',
   'images/DM/ada.avif',
   'images/DM/egfr1.avif',
