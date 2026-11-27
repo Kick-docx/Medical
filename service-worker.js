@@ -1,4 +1,4 @@
-const CACHE_NAME = 'medical-v1.4.0';
+const CACHE_NAME = 'medical-v1.5.0';
 const urlsToCache = [
   './',
   'css/styles.css',
@@ -101,7 +101,9 @@ const urlsToCache = [
   'pages/消化器内科/化学療法/Nivo+Ipi.html',
   'pages/消化器内科/化学療法/SOX+Nivo.html',
   'pages/消化器内科/化学療法/SP+Tmab.html',
-  'images/HOME.jpg',
+  'pages/消化器内科/化学療法/Atezo+Beva.html',
+  'pages/消化器内科/化学療法/Nivo+Ipi2.html',
+  'images/HOME.png',
   'images/DM/ada.avif',
   'images/DM/egfr1.avif',
   'images/DM/egfr2.avif',
